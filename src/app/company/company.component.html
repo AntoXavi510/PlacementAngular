@@ -1,1 +1,26 @@
-<p>company works!</p>
+<body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
+    <h1 class="text-white">Companies</h1>
+    <table class=" table table-bordered table-hover table-striped" style="background-color:white">
+    <thead>
+        <tr>
+          <th>
+            Company Id
+          </th> 
+          <th>
+            Company Name
+          </th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let company of companies">
+            <td>{{company.companyId}}</td>
+           
+            <td>{{company.companyName}}</td>
+           <td>
+            <a [routerLink]="['/admin/Companies/',company.companyId]">View</a>
+           </td>
+        </tr>
+        
+    </tbody>    
+    </table>
+</body>

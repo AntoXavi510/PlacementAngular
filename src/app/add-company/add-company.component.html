@@ -1,0 +1,16 @@
+
+<body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
+ <h1 class="text-white">Add New Company</h1>
+ <div class="container" *ngIf="company">
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3 text-white">
+        <label class="form-label text-white">Company Name</label>
+        <input type="text" class="form-control" name="companyName"[(ngModel)]="company.companyName">
+    </div>
+    <diV>
+        <button class="btn btn-primary">Save</button>
+        </diV>
+</form>
+</div>
+</body>
+        
