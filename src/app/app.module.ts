@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
 import { ViewCompanyComponent } from './view-company/view-company.component';
 import { AddCompanyComponent } from './add-company/add-company.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
     ViewCompanyComponent,
-    AddCompanyComponent
+    AddCompanyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
