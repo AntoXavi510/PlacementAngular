@@ -9,20 +9,29 @@ import { CompanyComponent } from './company/company.component';
 import { ViewCompanyComponent } from './view-company/view-company.component';
 import { AddCompanyComponent } from './add-company/add-company.component';
 import { HomeComponent } from './home/home.component';
-
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { StudentLoginComponent } from './student-login/student-login.component';
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
     ViewCompanyComponent,
     AddCompanyComponent,
-    HomeComponent
+    HomeComponent,
+    AddAdminComponent,
+    AdminLoginComponent,
+    AddStudentComponent,
+    StudentLoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

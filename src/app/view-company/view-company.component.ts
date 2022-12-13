@@ -25,21 +25,6 @@ export class ViewCompanyComponent implements OnInit {
     }
     
     )
-    // this.route.paramMap.subscribe(
-    //   params=>{const id=params.get('companyId');
-      
-    //     if(id){
-    //       this.companyService.getCompanyById(id).subscribe(response=>{this.company=response;})
-         
-    //   }
-    // }
-    
-    // )
-    // this.id = this.route.snapshot.params['companyId'];
-        
-    // this.companyService.getCompanyById(this.id).subscribe((data: Company)=>{
-    //   this.company = data;
-    // });
      }
      onSubmit():void{
       const company 
