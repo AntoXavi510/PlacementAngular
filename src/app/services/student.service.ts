@@ -17,4 +17,18 @@ export class StudentService {
    studentLogin(student:any):Observable<StudentToken>{
     return this.http.post<StudentToken>(this.apiBaseUrl+'/api/Students/Login',student);
    }
+   getAllStudents():Observable<Student[]>
+  {
+    return this.http.get<Student[]>(this.apiBaseUrl+'/api/Students');
+  }
+  getStudentById(id:any):Observable<Student> {
+    //return this.http.get(this.apiBaseUrl + "/api/Companies/"+ id);
+    return this.http.get<Student>(this.apiBaseUrl+'/api/Students/'+id);
+  }
+  deleteStudent(id:any):Observable<Student>{
+    return this.http.delete<Student>(this.apiBaseUrl+'/api/Students/'+id);
+   }
+   updateStudent(id:any,student:any):Observable<Student>{
+    return this.http.put<Student>(this.apiBaseUrl+'/api/Students/'+id,student);
+   }
 }

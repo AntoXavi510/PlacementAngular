@@ -14,6 +14,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
+import { StudentsComponent } from './students/students.component';
+import { ViewStudentsComponent } from './view-students/view-students.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,8 @@ import { StudentLoginComponent } from './student-login/student-login.component';
     AdminLoginComponent,
     AddStudentComponent,
     StudentLoginComponent,
+    StudentsComponent,
+    ViewStudentsComponent,
   ],
   imports: [
     BrowserModule,

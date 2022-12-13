@@ -1,0 +1,32 @@
+
+<body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
+    <h1 class="text-white">Details of Student</h1>
+    
+    <div>
+        <hr />
+        <form #form="ngForm" *ngIf="student" (ngSubmit)="onSubmit()">
+         <div>   
+        <label class="form-label text-white"> Student Id</label>
+        <input type="text" class="form-control" name="userId"[(ngModel)]="student.userId" readonly>
+        </div>
+        <div>
+        <label class="form-label text-white">Student Name</label>
+        <input type="text" class="form-control" name="firstName"[(ngModel)]="student.firstName">
+        </div>
+        <div>
+            <label class="form-label text-white">Department</label>
+            <input type="text" class="form-control" name="branchName"[(ngModel)]="student.branchName">
+            </div>
+        <br>
+        <diV>
+        <button class="btn btn-primary">Save</button>
+        </diV>
+        <br>
+        <diV>
+            <a class="btn btn-danger" (click)="deleteCompany()">Delete</a>
+            </diV>
+    </form>
+    <div class="text-center">
+        <p><a class="text-white" href="admin/Companies">Back to Home</a></p>
+      </div>
+    </div>

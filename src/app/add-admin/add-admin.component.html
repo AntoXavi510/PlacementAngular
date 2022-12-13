@@ -1,7 +1,5 @@
-<p>add-admin works!</p>
-
 <body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
-    <h1 class="text-white">Add New Company</h1>
+    <h1 class="text-white">Register as Admin</h1>
     <div class="container" *ngIf="admin">
    <form #form="ngForm" (ngSubmit)="onSubmit()">
        <div class="mb-3 text-white">
@@ -12,10 +10,15 @@
         <label class="form-label text-white">Password</label>
         <input type="password" class="form-control" name="password"[(ngModel)]="admin.password">
     </div>
+    
        <diV>
            <button class="btn btn-primary">Save</button>
-           </diV>
+           </diV>         
    </form>
+   
+   <div class="text-center">
+    <p><a class="text-white" href="admin/Login">Back to Login Page</a></p>
+  </div>
    </div>
    </body>
    

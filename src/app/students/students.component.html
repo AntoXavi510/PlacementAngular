@@ -1,0 +1,35 @@
+<body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
+    <h1 class="text-white">Students</h1>
+    <table class=" table table-bordered table-hover table-striped" style="background-color:white">
+    <thead>
+        <tr>
+          <th>
+            Student Id
+          </th> 
+          <th>
+            Student Name
+          </th> 
+          <th>
+            Department
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.userId}}</td>
+           
+            <td>{{student.firstName}}</td>
+            <td>
+                {{student.branchName}}
+               </td>
+            <td>
+            <a [routerLink]="['/admin/students/',student.userId]">View</a>
+           </td>
+           
+        </tr>
+        
+    </tbody>    
+    </table>
+    <div class="text-center">
+        <p><a class="text-white" href="admin/Companies">Back to Home</a></p>
+      </div>
+</body>

@@ -3,19 +3,26 @@
     <h1 class="text-white">Details of Company</h1>
     
     <div>
-        <h4 class="text">View company by id</h4>
         <hr />
         <form #form="ngForm" *ngIf="company" (ngSubmit)="onSubmit()">
+         <div>   
         <label class="form-label text-white"> Company Id</label>
         <input type="text" class="form-control" name="companyId"[(ngModel)]="company.companyId" readonly>
+        </div>
+        <div>
         <label class="form-label text-white">Company Name</label>
         <input type="text" class="form-control" name="companyName"[(ngModel)]="company.companyName">
+        </div>
+        <br>
         <diV>
         <button class="btn btn-primary">Save</button>
         </diV>
+        <br>
         <diV>
             <a class="btn btn-danger" (click)="deleteCompany()">Delete</a>
             </diV>
     </form>
-        
+    <div class="text-center">
+        <p><a class="text-white" href="admin/Companies">Back to Home</a></p>
+      </div>
     </div>

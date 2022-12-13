@@ -7,7 +7,9 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { CompanyComponent } from './company/company.component';
 import { HomeComponent } from './home/home.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
+import { StudentsComponent } from './students/students.component';
 import { ViewCompanyComponent } from './view-company/view-company.component';
+import { ViewStudentsComponent } from './view-students/view-students.component';
 
 const routes: Routes = [
   
@@ -27,6 +29,13 @@ const routes: Routes = [
     path:'student/Login',
     component:StudentLoginComponent
   },
+  {
+    path:'admin/students',
+    component:StudentsComponent
+  },
+  {path:'admin/students/:id',
+  component:ViewStudentsComponent
+},
   {
     path:'admin/Login',
     component:AdminLoginComponent

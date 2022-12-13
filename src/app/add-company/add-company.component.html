@@ -1,6 +1,7 @@
 
 <body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
  <h1 class="text-white">Add New Company</h1>
+ <br>
  <div class="container" *ngIf="company">
 <form #form="ngForm" (ngSubmit)="onSubmit()">
     <div class="mb-3 text-white">
@@ -12,5 +13,8 @@
         </diV>
 </form>
 </div>
+<div class="text-center">
+    <p><a class="text-white" href="admin/Companies">Back to Home</a></p>
+  </div>
 </body>
         
