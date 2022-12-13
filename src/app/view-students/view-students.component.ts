@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr/public_api';
 import { last } from 'rxjs';
 import { Student } from '../models/student-model';
 import { StudentService } from '../services/student.service';
@@ -46,16 +47,16 @@ export class ViewStudentsComponent implements OnInit {
       this.studentService.updateStudent(this.student?.userId,student).
       subscribe(
         response=>{
-          this.router.navigate(["admin/students"])
+          //this.toastr.success("Successfully Updated the student");
           alert('Successfully Updated the student');
         }
         );
     }
-    deleteCompany():void{
+    deleteStudent():void{
       this.studentService.deleteStudent(this.student?.userId)
       .subscribe(
         response=>{
-          
+         
           this.router.navigate(['admin/students']);
           alert('Deleted Successfully');
         }

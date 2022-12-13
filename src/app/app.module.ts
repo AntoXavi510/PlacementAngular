@@ -2,7 +2,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
@@ -16,6 +17,9 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { StudentLoginComponent } from './student-login/student-login.component';
 import { StudentsComponent } from './students/students.component';
 import { ViewStudentsComponent } from './view-students/view-students.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,13 +33,17 @@ import { ViewStudentsComponent } from './view-students/view-students.component';
     StudentLoginComponent,
     StudentsComponent,
     ViewStudentsComponent,
+    
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    ToastrModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

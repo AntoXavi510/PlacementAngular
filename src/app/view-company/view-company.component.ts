@@ -43,7 +43,7 @@ export class ViewCompanyComponent implements OnInit {
       this.companyService.deleteCompany(this.company?.companyId)
       .subscribe(
         response=>{
-          
+        
           this.router.navigate(['admin/Companies']);
           alert('Deleted Successfully');
         }
