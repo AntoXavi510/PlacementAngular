@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+import { ToastrModule,ToastContainerModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
@@ -38,7 +38,8 @@ import { ViewStudentsComponent } from './view-students/view-students.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    ToastrModule,
+    ToastrModule.forRoot(),
+    ToastContainerModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,

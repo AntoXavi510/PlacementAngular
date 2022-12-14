@@ -2,10 +2,10 @@
 <body class="bg-image" style="background-image: url('https://stijc.com/wp-content/uploads/2019/02/Technical-Background.jpg'); height: 100vh; ">
     <h1 class="text-white">Details of Company</h1>
     
-    <div>
+    <div toastContainer>
         <hr />
         <form #form="ngForm" *ngIf="company" (ngSubmit)="onSubmit()">
-         <div>   
+         <div >   
         <label class="form-label text-white"> Company Id</label>
         <input type="text" class="form-control" name="companyId"[(ngModel)]="company.companyId" readonly>
         </div>

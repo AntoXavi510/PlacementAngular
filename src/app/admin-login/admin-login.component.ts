@@ -4,6 +4,7 @@ import { AdminService } from '../services/admin.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Admin } from '../models/admin-model';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-admin-login',
@@ -12,7 +13,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AdminLoginComponent implements OnInit {
   loginForm:FormGroup;
-  constructor(private adminService:AdminService,private router: Router,private route:ActivatedRoute) { }
+  constructor(private adminService:AdminService,private router: Router,private route:ActivatedRoute,private toastr:ToastrService) { }
   ngOnInit(): void {
     this.loginForm=new FormGroup({
       userName: new FormControl(),
@@ -28,14 +29,20 @@ export class AdminLoginComponent implements OnInit {
       this.adminService.adminLogin(this.loginForm.value).subscribe({
         next:(res)=>{
           this.router.navigate(['admin/Companies']);
-            alert("Login Successful");
+            //alert("Login Successful");
+            setTimeout(()=>{  
+
+              this.toastr.success("Successful Login");                        
+              }, 1000);
             return true;
         },
         error:(err)=>{
           alert("Invalid Credentials")
         }
       })
-     }
+     } 
+    
+  
     }
     }
   
